@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		D4FCF47F1C594E5C0050E136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCF47E1C594E5C0050E136 /* AppDelegate.swift */; };
-		D4FCF4811C594E5C0050E136 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCF4801C594E5C0050E136 /* ViewController.swift */; };
+		D4FCF4811C594E5C0050E136 /* SMVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCF4801C594E5C0050E136 /* SMVViewController.swift */; };
 		D4FCF4841C594E5C0050E136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FCF4821C594E5C0050E136 /* Main.storyboard */; };
 		D4FCF4871C594E5C0050E136 /* Samverkan112.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4FCF4851C594E5C0050E136 /* Samverkan112.xcdatamodeld */; };
 		D4FCF4891C594E5C0050E136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4FCF4881C594E5C0050E136 /* Assets.xcassets */; };
 		D4FCF48C1C594E5C0050E136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FCF48A1C594E5C0050E136 /* LaunchScreen.storyboard */; };
 		D4FCF4971C594E5C0050E136 /* Samverkan112Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCF4961C594E5C0050E136 /* Samverkan112Tests.swift */; };
 		D4FCF4A21C594E5C0050E136 /* Samverkan112UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCF4A11C594E5C0050E136 /* Samverkan112UITests.swift */; };
+		D4FCF4B21C5961B80050E136 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FCF4B11C5961B80050E136 /* SystemConfiguration.framework */; };
+		D4FCF4B41C5962470050E136 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCF4B31C5962460050E136 /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		D4FCF47B1C594E5C0050E136 /* Samverkan112.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Samverkan112.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FCF47E1C594E5C0050E136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D4FCF4801C594E5C0050E136 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4FCF4801C594E5C0050E136 /* SMVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMVViewController.swift; sourceTree = "<group>"; };
 		D4FCF4831C594E5C0050E136 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4FCF4861C594E5C0050E136 /* Samverkan112.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Samverkan112.xcdatamodel; sourceTree = "<group>"; };
 		D4FCF4881C594E5C0050E136 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		D4FCF49D1C594E5C0050E136 /* Samverkan112UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Samverkan112UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FCF4A11C594E5C0050E136 /* Samverkan112UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Samverkan112UITests.swift; sourceTree = "<group>"; };
 		D4FCF4A31C594E5C0050E136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4FCF4B11C5961B80050E136 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D4FCF4B31C5962460050E136 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FCF4B21C5961B80050E136 /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +84,7 @@
 		D4FCF4721C594E5B0050E136 = {
 			isa = PBXGroup;
 			children = (
+				D4FCF4B11C5961B80050E136 /* SystemConfiguration.framework */,
 				D4FCF47D1C594E5C0050E136 /* Samverkan112 */,
 				D4FCF4951C594E5C0050E136 /* Samverkan112Tests */,
 				D4FCF4A01C594E5C0050E136 /* Samverkan112UITests */,
@@ -100,12 +106,13 @@
 			isa = PBXGroup;
 			children = (
 				D4FCF47E1C594E5C0050E136 /* AppDelegate.swift */,
-				D4FCF4801C594E5C0050E136 /* ViewController.swift */,
+				D4FCF4801C594E5C0050E136 /* SMVViewController.swift */,
 				D4FCF4821C594E5C0050E136 /* Main.storyboard */,
 				D4FCF4881C594E5C0050E136 /* Assets.xcassets */,
 				D4FCF48A1C594E5C0050E136 /* LaunchScreen.storyboard */,
 				D4FCF48D1C594E5C0050E136 /* Info.plist */,
 				D4FCF4851C594E5C0050E136 /* Samverkan112.xcdatamodeld */,
+				D4FCF4B31C5962460050E136 /* Reachability.swift */,
 			);
 			path = Samverkan112;
 			sourceTree = "<group>";
@@ -259,8 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4FCF4811C594E5C0050E136 /* ViewController.swift in Sources */,
+				D4FCF4811C594E5C0050E136 /* SMVViewController.swift in Sources */,
 				D4FCF47F1C594E5C0050E136 /* AppDelegate.swift in Sources */,
+				D4FCF4B41C5962470050E136 /* Reachability.swift in Sources */,
 				D4FCF4871C594E5C0050E136 /* Samverkan112.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -390,7 +398,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
