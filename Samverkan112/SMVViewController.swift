@@ -8,53 +8,23 @@
 
 import UIKit
 
-struct SMVViewControllerrStruct {
-    let MAIN_URL:String = "http://www.s112.se"
-}
-
-class SMVViewController: UIViewController,UIWebViewDelegate {
-    @IBOutlet weak var webView: UIWebView!
+class SMVViewController: UIViewController,SMWebViewDelegate {
+    @IBOutlet weak var webView: SMWebView!
+    var extendedSplashImage:UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        setupWebView()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        webView.delegateProtocol = self
+        extendSplash()
     }
     
-    func setupWebView() {
-        webView.delegate = self
-        webView.loadRequest(NSURLRequest(URL: NSURL(string: SMVViewControllerrStruct().MAIN_URL)!))
+    func extendSplash () {
+        extendedSplashImage = UIImageView(frame: self.view.frame)
+        extendedSplashImage.image = UIImage(imageLiteral: "splash-1242x2208.png")
+        self.view.addSubview(extendedSplashImage)
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
-        if Reachability.isConnectedToNetwork() == true {
-            
-        } else {
-            let badConnectionAlert = UIAlertController(title: "Dålig anslutning", message: "Kolla din anslutning innan du fortsätter.", preferredStyle: UIAlertControllerStyle.Alert)
-            badConnectionAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                switch action.style{
-                case .Default:
-                    print("default")
-                    
-                case .Cancel:
-                    print("cancel")
-                    
-                case .Destructive:
-                    print("destructive")
-                }
-            }))
-            
-            self.presentViewController(badConnectionAlert, animated: true, completion: nil)
-        }
-    }
-    
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        print("LADDAD URL = \(request.URL)")
-        return true
+    func webViewDidFinishLoading() {
+        extendedSplashImage.removeFromSuperview()
     }
 }

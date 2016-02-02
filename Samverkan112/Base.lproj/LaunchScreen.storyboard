@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,22 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash-1242x2208.png" translatesAutoresizingMaskIntoConstraints="NO" id="yeu-IW-sel">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="Bi0-fp-nS1"/>
+                                    <constraint firstAttribute="height" constant="600" id="lzT-9T-5QZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="yeu-IW-sel" secondAttribute="bottom" id="27h-iU-xIb"/>
+                            <constraint firstItem="yeu-IW-sel" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="4H7-vu-FdX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yeu-IW-sel" secondAttribute="trailing" constant="-20" id="RNg-59-hSv"/>
+                            <constraint firstItem="yeu-IW-sel" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="mOn-3U-BaL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +40,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="splash-1242x2208.png" width="1242" height="2208"/>
+    </resources>
 </document>
