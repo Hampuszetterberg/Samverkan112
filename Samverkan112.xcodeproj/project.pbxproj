@@ -41,8 +41,8 @@
 
 /* Begin PBXFileReference section */
 		D4442B481C6762590047A7C8 /* Samverkan112-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Samverkan112-Bridging-Header.h"; sourceTree = "<group>"; };
-		D4442B491C6762590047A7C8 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = ../../iRate/iRate/iRate.h; sourceTree = "<group>"; };
-		D4442B4A1C6762590047A7C8 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = ../../iRate/iRate/iRate.m; sourceTree = "<group>"; };
+		D4442B491C6762590047A7C8 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		D4442B4A1C6762590047A7C8 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		D4FCF47B1C594E5C0050E136 /* Samverkan112.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Samverkan112.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FCF47E1C594E5C0050E136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4FCF4801C594E5C0050E136 /* SMVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMVViewController.swift; sourceTree = "<group>"; };
