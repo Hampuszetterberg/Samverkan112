@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0E3956CDB82E34A20A77909B3F080BF41E84B8F9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "823FA7801445CB41A1B20407B9AF1CDEA08EB4A1" : 0,
+    "0E3956CDB82E34A20A77909B3F080BF41E84B8F9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BC4AAED4-4F40-44D4-A3EC-BE3E18CAA4B1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "823FA7801445CB41A1B20407B9AF1CDEA08EB4A1" : "iRate\/",
+    "0E3956CDB82E34A20A77909B3F080BF41E84B8F9" : "Samverkan112\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Samverkan112",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Samverkan112.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Hampuszetterberg\/Samverkan112.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0E3956CDB82E34A20A77909B3F080BF41E84B8F9"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:nicklockwood\/iRate.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "823FA7801445CB41A1B20407B9AF1CDEA08EB4A1"
+    }
+  ]
+}

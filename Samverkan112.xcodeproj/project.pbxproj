@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D4442B4B1C6762590047A7C8 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4442B4A1C6762590047A7C8 /* iRate.m */; };
 		D4FCF47F1C594E5C0050E136 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCF47E1C594E5C0050E136 /* AppDelegate.swift */; };
 		D4FCF4811C594E5C0050E136 /* SMVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FCF4801C594E5C0050E136 /* SMVViewController.swift */; };
 		D4FCF4841C594E5C0050E136 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4FCF4821C594E5C0050E136 /* Main.storyboard */; };
@@ -39,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D4442B481C6762590047A7C8 /* Samverkan112-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Samverkan112-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4442B491C6762590047A7C8 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = iRate.h; path = ../../iRate/iRate/iRate.h; sourceTree = "<group>"; };
+		D4442B4A1C6762590047A7C8 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = iRate.m; path = ../../iRate/iRate/iRate.m; sourceTree = "<group>"; };
 		D4FCF47B1C594E5C0050E136 /* Samverkan112.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Samverkan112.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FCF47E1C594E5C0050E136 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4FCF4801C594E5C0050E136 /* SMVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMVViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D4442B471C6762250047A7C8 /* ThirdPartLibs */ = {
+			isa = PBXGroup;
+			children = (
+				D4442B491C6762590047A7C8 /* iRate.h */,
+				D4442B4A1C6762590047A7C8 /* iRate.m */,
+				D4442B481C6762590047A7C8 /* Samverkan112-Bridging-Header.h */,
+			);
+			name = ThirdPartLibs;
+			sourceTree = "<group>";
+		};
 		D4FCF4721C594E5B0050E136 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +123,7 @@
 		D4FCF47D1C594E5C0050E136 /* Samverkan112 */ = {
 			isa = PBXGroup;
 			children = (
+				D4442B471C6762250047A7C8 /* ThirdPartLibs */,
 				D4FCF4B71C60D2CC0050E136 /* splash-1242x2208.png */,
 				D4FCF47E1C594E5C0050E136 /* AppDelegate.swift */,
 				D4FCF4881C594E5C0050E136 /* Assets.xcassets */,
@@ -276,6 +291,7 @@
 				D4FCF4811C594E5C0050E136 /* SMVViewController.swift in Sources */,
 				D4FCF47F1C594E5C0050E136 /* AppDelegate.swift in Sources */,
 				D4FCF4B41C5962470050E136 /* Reachability.swift in Sources */,
+				D4442B4B1C6762590047A7C8 /* iRate.m in Sources */,
 				D4FCF4871C594E5C0050E136 /* Samverkan112.xcdatamodeld in Sources */,
 				D4FCF4B61C60C4D70050E136 /* SMVWebView.swift in Sources */,
 			);
@@ -418,10 +434,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Samverkan112/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samverkan.Samverkan112;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Samverkan112/Samverkan112-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -430,10 +449,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Samverkan112/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samverkan.Samverkan112;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Samverkan112/Samverkan112-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -504,6 +525,7 @@
 				D4FCF4A81C594E5C0050E136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4FCF4A91C594E5C0050E136 /* Build configuration list for PBXNativeTarget "Samverkan112Tests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +534,7 @@
 				D4FCF4AB1C594E5C0050E136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4FCF4AC1C594E5C0050E136 /* Build configuration list for PBXNativeTarget "Samverkan112UITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +543,7 @@
 				D4FCF4AE1C594E5C0050E136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

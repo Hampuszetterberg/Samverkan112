@@ -9,7 +9,9 @@
 import UIKit
 
 class SMVViewController: UIViewController,SMWebViewDelegate {
+    
     @IBOutlet weak var webView: SMWebView!
+    
     var extendedSplashImage:UIImageView!
     
     override func viewDidLoad() {

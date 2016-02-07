@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        iRate.sharedInstance().applicationBundleID = NSBundle.mainBundle().bundleIdentifier
+        iRate.sharedInstance().onlyPromptIfLatestVersion = false
+        iRate.sharedInstance().remindPeriod = 3
+        iRate.sharedInstance().daysUntilPrompt = 2
+        //enable preview mode
+        iRate.sharedInstance().previewMode = true
+        
         // Override point for customization after application launch.
         return true
     }
