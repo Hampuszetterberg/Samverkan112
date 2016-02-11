@@ -28,6 +28,7 @@ class SMWebView : UIWebView,UIWebViewDelegate {
     func setup() {
         hidden = true
         delegate = self
+        dataDetectorTypes = UIDataDetectorTypes.Link
         loadRequest(NSURLRequest(URL: NSURL(string: SMVWebViewStruct().MAIN_URL)!))
     }
     
