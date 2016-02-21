@@ -8,17 +8,23 @@
 
 import SpriteKit
 
-struct SMVWebViewStruct {
-    let mainUrl: String = "http://www.s112.se"
-}
-
 protocol SMWebViewDelegate {
     func webViewDidFinishLoading()
 }
 
 class SMWebView: UIWebView, UIWebViewDelegate {
     var delegateProtocol: SMWebViewDelegate!
-
+    private let permissionList = SMWebViewPermissonlistStruct.init()
+    
+    private struct SMVWebViewStruct {
+        let mainUrl: String = "http://www.s112.se"
+    }
+    
+    private struct SMWebViewPermissonlistStruct {
+        let blacklist: Array = ["s112.se/flash/","issuu.com",".pdf"]
+        let whitelist: Array = [""]
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -32,39 +38,24 @@ class SMWebView: UIWebView, UIWebViewDelegate {
     }
 
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-
         let urlRequest:String = (request.URL?.absoluteString)!
+        
+        for blacklistURL in permissionList.blacklist {
+            if (urlRequest.rangeOfString(blacklistURL) != nil) {
+                
+                if urlRequest.rangeOfString("s112.se/flash/") != nil {
+                    let badConnectionAlert = UIAlertController(title: "Obs", message: "Flash stöds ej på den här enheten.", preferredStyle: UIAlertControllerStyle.Alert)
+                    badConnectionAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+                    }))
 
-        print(urlRequest)
+                    UIApplication.sharedApplication().keyWindow?.rootViewController?.presentViewController(badConnectionAlert, animated: true, completion: nil);
 
-        if (urlRequest.rangeOfString("s112.se/flash/") != nil) {
-
-            let badConnectionAlert = UIAlertController(title: "Supportar ej flash", message: "Flash stöds tyvärr ej på denna device.", preferredStyle: UIAlertControllerStyle.Alert)
-            badConnectionAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                switch action.style {
-                case .Default:
-                    print("default")
-                case .Cancel:
-                    print("cancel")
-                case .Destructive:
-                    print("destructive")
+                    return false
                 }
-            }))
-
-            return false
-        }
-
-        if (urlRequest.rangeOfString("s112.se") == nil) {
-            UIApplication.sharedApplication().openURL(NSURL(string:urlRequest)!)
-
-            return false
-        }
-
-        if urlRequest.hasSuffix(".PDF") {
-
-            UIApplication.sharedApplication().openURL(NSURL(string: urlRequest)!)
-
-            return false
+                
+                UIApplication.sharedApplication().openURL(NSURL(string: urlRequest)!)
+                return false
+            }
         }
 
         return true
