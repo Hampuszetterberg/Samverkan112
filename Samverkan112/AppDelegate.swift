@@ -18,12 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         iRate.sharedInstance().applicationBundleID = NSBundle.mainBundle().bundleIdentifier
-        iRate.sharedInstance().onlyPromptIfLatestVersion = false
-        iRate.sharedInstance().remindPeriod = 3
+        iRate.sharedInstance().appStoreID = 1094352092
+        iRate.sharedInstance().onlyPromptIfLatestVersion = true
+        iRate.sharedInstance().remindPeriod = 5
         iRate.sharedInstance().daysUntilPrompt = 2
-        //enable preview mode
-        iRate.sharedInstance().previewMode = true
-        
+        iRate.sharedInstance().messageTitle = "Betygsätt oss"
+        iRate.sharedInstance().message = "Om du gillar att använda vår app, ge oss gärna ett gott betyg i AppStore."
+        iRate.sharedInstance().cancelButtonLabel = "Avbryt"
+        iRate.sharedInstance().rateButtonLabel = "Sätt Betyg"
+        iRate.sharedInstance().remindButtonLabel = "Påminn mig"
+
         // Override point for customization after application launch.
         return true
     }
