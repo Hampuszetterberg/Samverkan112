@@ -23,6 +23,7 @@ class SMVViewController: UIViewController,SMWebViewDelegate {
     func extendSplash () {
         extendedSplashImage = UIImageView(frame: self.view.frame)
         extendedSplashImage.image = UIImage(imageLiteral: "splash-1242x2208.png")
+        extendedSplashImage.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         self.view.addSubview(extendedSplashImage)
     }
     

@@ -443,6 +443,7 @@
 				PROVISIONING_PROFILE = "b094369b-70f2-4cc5-ae2d-79f24ed8af95";
 				SWIFT_OBJC_BRIDGING_HEADER = "Samverkan112/Samverkan112-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -459,6 +460,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "7ba99c7e-2a61-4728-83aa-662a7c480ade";
 				SWIFT_OBJC_BRIDGING_HEADER = "Samverkan112/Samverkan112-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
