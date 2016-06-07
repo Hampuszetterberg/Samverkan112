@@ -440,7 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lagonda.s112;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b094369b-70f2-4cc5-ae2d-79f24ed8af95";
+				PROVISIONING_PROFILE = "eef9b318-4c26-4672-89b5-e28b83e2aabb";
 				SWIFT_OBJC_BRIDGING_HEADER = "Samverkan112/Samverkan112-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
